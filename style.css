@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+font-family: "Lobster Two", cursive;
+background:linear-gradient(to right,#d18662, #f3d19c, #d18662);
+}
+
+
+.hero button{
+background-color: black;
+color: white;
+border: none;
+padding: 12px 25px;
+border-radius: 6px;
+cursor: pointer;
+font-size: 16px;
+transition: background-color 0.3s ease;
+}
+.hero{
+background-image: url('images/h1.webp'); 
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+position: relative;
+height: 80vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+transition: background-image 1s ease-in-out;
+}
+
+.header-2 nav span a {
+  text-decoration: none;
+  color: black;
+  margin: 0 15px;
+  font-weight: 500;
+  font-size: medium;
+}
+
+header{
+display: flex;
+border: 1px solid black;;
+grid-column: 1/2;
+grid-row: 1/2;
+color: white;
+padding: 5px;
+
+}
+
+.header-1{
+width: 53vw;
+text-align: left;
+color: black ;
+font-size: 2rem;
+
+}
+.header-2{
+width: 43vw;
+text-align: right;
+font-size: 2rem;
+}
+.header-2 span{
+margin-left: 10px;
+}
+
+a{
+    color: black;
+}
+
+p{
+    font-family: "Lobster Two", cursive;
+    font-size: 1.2rem;
+}
+
+
+.artisan{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+max-width: 1000px;
+margin: 0 auto;
+}
+.card{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(254, 233, 207);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0px 1px 2px black ;
+    padding:50px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover{
+    box-shadow: 0 4px 15px black;
+}
+
+
+.explore {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 1rem;
+padding: 1rem;
+}
+
+h2{
+    text-align: center;
+}
+
+
+
+.product{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(254, 233, 207);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0px 1px 2px black ;
+    padding:50px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product:hover{
+    box-shadow: 0 4px 15px black;
+}
+.product img{
+    display: block;        
+    margin: 0 auto;
+    width: 40vw;
+    height: 40vh;
+    object-fit: contain;
+}
+.img{
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 30vh;
+}
+.pinfo{
+    flex-grow: 1;
+    font-size: 0.9rem;
+    text-align: justify;
+    color: rgb(6, 1, 31);;
+}
+
+h2{
+    font-size: 1.1rem;
+}
+
+.product {
+  position: relative;
+  overflow: hidden;
+}
+
+.product::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.3), rgba(255,255,255,0));
+  transform: skewX(-25deg);
+}
+
+.product:hover::before {
+  left: 125%;
+  transition: left 0.7s ease-in-out;
+}
+
+.product {
+  position: relative;
+  transition: 0.4s;
+}
+
+.product::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: border-color 0.4s ease;
+}
+
+ button{
+    border-radius: 10px;
+    box-shadow: 0 2px 5px white;
+    font-family: "Lobster Two", cursive;
+ }
+
+
+footer{
+    text-align: center;
+    color: rgb(6, 1, 31);
+    box-shadow: 0 1px 2px gray;
+}
+
+
+.why-item{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 1rem;
+padding: 1rem;
+}
+
+.item {
+text-align: center;
+display: flex;
+flex-direction: column;
+background-color: rgb(254, 233, 207);
+border-radius: 30px;
+overflow: hidden;
+box-shadow: 0px 1px 2px black ;
+padding:50px;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item:hover{
+    box-shadow: 0 4px 15px black;
+}
+
+
+/*Responsive web */
+@media(max-width:600px){
+main {
+margin: 10px;
+padding: 15px;
+}
+.product img{
+width: 50vw;
+height: 60vh;
+object-fit: contain;
+}
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> The Handloom Project</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    body {
+      margin: 0;
+      font-family: "Lobster Two", cursive;
+      background: linear-gradient(to right,#d18662, #f3d19c, #d18662);
+      color: #333;
+    }
+
+    header {
+      background-color: #7f5539;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .intro {
+      text-align: center;
+      font-style: italic;
+      padding: 15px 30px;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.5;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .product {
+      background-color: rgb(254, 233, 207);
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+      padding: 15px;
+      text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px black;
+    }
+
+    .product img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .product h2 {
+      font-size: 18px;
+      margin: 10px 0;
+      color: #5a3e36;
+    }
+
+    .product p {
+      font-size: 14px;
+      color: #444;
+    }
+
+  .product {
+  position: relative;
+  overflow: hidden;
+}
+
+.product::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.3), rgba(255,255,255,0));
+  transform: skewX(-25deg);
+}
+
+.product:hover::before {
+  left: 125%;
+  transition: left 0.7s ease-in-out;
+}
+
+.product {
+  position: relative;
+  transition: 0.4s;
+}
+
+.product::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: border-color 0.4s ease;
+}
+
+.product:hover::after {
+  border-color: #7f5539;
+}
+
+    footer {
+      background-color: #7f5539;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      margin-top: 30px;
+    }
+
+    footer button{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px white;
+    font-family: "Lobster Two", cursive;
+    }
+
+    .price {
+  font-weight: bold;
+  color: #a52a2a;  /* dark brown/red for luxury look */
+  margin-top: 5px;
+  font-size: 15px;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>The Handloom Project </h1>
+  </header>
+
+  <p class="intro">
+    The variety of handloom products such as sarees, fabrics, and home décor items reflects India's
+    rich weaving traditions. Each saree below is a masterpiece woven by skilled artisans.
+  </p>
+
+  <section class="products">
+
+    <div class="product">
+      <img src="images/sarees/1.webp" alt="Kanjivaram Silk Cotton Saree" />
+      <h2>Kanjivaram Silk Cotton Saree</h2>
+      <p>Experience harmony of color and tradition — Pear Green meets Royal Blue with intricate gold zari elegance.</p>
+      <p class="price">Price: ₹4,000</p>
+    </div>
+
+    <div class="product">
+      <img src="images/sarees/2.jpg" alt="Banarasi Tissue Organza" />
+      <h2>Banarasi Tissue Organza</h2>
+      <p>From the heart of Varanasi, featuring traditional zari craftsmanship by renowned Banaras weavers.</p>
+    <p class="price">Price: ₹3,500</p>
+    </div>
+
+    <div class="product">
+      <img src="images/sarees/3.webp" alt="Chanderi Silk Saree" />
+      <h2>Chanderi Silk Saree</h2>
+      <p>Lightweight, glossy texture with exquisite zari work from Madhya Pradesh’s Chanderi town.</p>
+    <p class="price">Price: ₹4,500</p>
+    </div>
+
+    <div class="product">
+      <img src="images/sarees/4.webp" alt="Maheshwari Silk Saree" />
+      <h2>Maheshwari Silk Saree</h2>
+      <p>Inspired by Maheshwar fort motifs — jasmine flowers, bricks, and diamond-shaped Heera designs.</p>
+    <p class="price">Price: ₹3,000</p>
+    </div>
+
+    <div class="product">
+      <img src="images/sarees/5.jpg" alt="Uppada Silk Saree" />
+      <h2>Uppada Silk Saree</h2>
+      <p>Known for the Jamdani weaving style — handwoven without mechanical tools, truly intricate and rich.</p>
+    <p class="price">Price: ₹5,000</p>
+    </div>
+
+    <div class="product">
+      <img src="images/sarees/6.jpg" alt="Gadwal Pure Silk Saree" />
+      <h2>Gadwal Pure Silk Saree</h2>
+      <p>A traditional symbol of South Indian heritage, once used in temple rituals and religious ceremonies.</p>
+    <p class="price">Price: ₹4,000</p>
+    </div>
+
+    <div class="product">
+      <img src="images/sarees/7.webp" alt="Venkatagiri Pattu Saree" />
+      <h2>Venkatagiri Pattu Saree</h2>
+      <p>Intricate gold zari and fine Jamdhani weaves featuring motifs like Kalpavriksha and Kamadhenu.</p>
+    <p class="price">Price: ₹3,600</p>
+    </div>
+
+    <div class="product">
+      <img src="images/sarees/8.jpg" alt="Kalamkari Chennuri Silk" />
+      <h2>Kalamkari Chennuri Silk</h2>
+      <p>Traditional hand-painted art from Srikalahasthi, showcasing pen kalamkari on soft Chennuri silk.</p>
+    <p class="price">Price: ₹2,000</p>
+    </div>
+
+    <div class="product">
+      <img src="images/sarees/9.jpg" alt="Mangalagiri Pattu Saree" />
+      <h2>Mangalagiri Pattu Saree</h2>
+      <p>Elegant handwoven sarees with the signature Nizam border, made in Andhra Pradesh.</p>
+    <p class="price">Price: ₹4,000</p>
+    </div>
+
+    <div class="product">
+      <img src="images/sarees/10.webp" alt="Tussar Silk Saree" />
+      <h2>Tussar Silk Saree</h2>
+      <p>Natural golden silk from Eastern India, known for its earthy texture and refined simplicity.</p>
+    <p class="price">Price: ₹4,500</p>
+    </div>
+
+    <div class="product">
+      <img src="images/sarees/11.jpg" alt="Muslin Jori Work Saree" />
+      <h2>Muslin Jori Work Saree</h2>
+      <p>Lightweight muslin saree featuring rich jori (zari) embroidery — elegant and breathable.</p>
+    <p class="price">Price: ₹2,500</p>
+    </div>
+
+    <div class="product">
+      <img src="images/sarees/12.webp" alt="Murshidabad Silk Saree" />
+      <h2>Murshidabad Silk Saree</h2>
+      <p>Pure tussar and silk saree from West Bengal, reflecting centuries-old craftsmanship.</p>
+    <p class="price">Price: ₹3,000</p>
+    </div>
+
+    <div class="product">
+      <img src="images/sarees/13.webp" alt="Murshidabad Silk Saree" />
+      <h2>Venkatagiri Pattu Saree</h2>
+      <p>Pure pattu saree from Andra pradesh, reflecting centuries-old craftsmanship.</p>
+    <p class="price">Price: ₹3,000</p>
+    </div>
+
+    <div class="product">
+      <img src="images/sarees/14.jpg" alt="Murshidabad Silk Saree" />
+      <h2>Mangalagiri Cotton Saree</h2>
+      <p>Pure mangalagiri Cotton saree from Andhra pradesh,Known for comfort and everday use .</p>
+    <p class="price">Price: ₹3,000</p>
+    </div>
+
+    <div class="product">
+      <img src="images/sarees/15.webp" alt="Murshidabad Silk Saree" />
+      <h2>Banarasi Silk Saree</h2>
+      <p>Indulge in the opulent beauty of Vriksham Purple Mashru Satin Silk Banarasi Saree</p>
+    <p class="price">Price: ₹3,000</p>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2025 The Handloom Project. All rights reserved.</p>
+    <p>Every thread tells a story.</p>
+    <a href="About.html" target="_blank">
+    <button>Next</button>
+    </a>
+  </footer>
+
+  <script>
+    document.getElementById("shopBtn").addEventListener("click", () => {
+    window.location.href = "About.html"
+  });
+  </script>
+</body>
+</html>

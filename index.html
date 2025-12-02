@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Gallery Layout</title>
     <link rel="stylesheet" href="style.css">
-    <a href="page-1.html"> page 1</a>
-    <a href="About.html">About</a>
     <style>
         
        
     </style>
 </head>
 <body>
+
+    <a href="page-1.html"> page 1</a>
+    <a href="About.html">About</a>
+
     <header>
       <div class="header-1">
        The Handloom Project
@@ -75,19 +77,19 @@
     <br>
     <div class="artisan">
       <div class="card">
-        <h2>Artisan 1<h2>
+        <h2>Artisan 1</h2>
         <br>
         <h3>Lakshmi from Kanchipuram</h3>
         <p>Kanchipuram is the center for the production of Kanjeevaram silk sarees, which are famous for their vibrant colors, intricate traditional designs, and rich quality.</p>
       </div>
       <div class="card">
-        <h2>Artisan 2<h2>
+        <h2>Artisan 2</h2>
         <br>
         <h3>Sita from Venkatagiri </h3>
         <p>Venkatagiri is famous for its handloom cotton and silk sarees, which are known for their fine, lightweight texture and intricate gold or silver zari work. </p>
       </div>
       <div class="card">
-        <h2>Artisan 3<h2>
+        <h2>Artisan 3</h2>
         <br>
         <h3>Ravi from Mangalagiri  </h3>
         <p>Made from fine cotton yarn. Known for a crisp finish, solid colors, and a distinct minimalistic style. Typically have borders woven with gold or copper (zari) threads.  </p>
@@ -128,7 +130,6 @@
     
     const hero = document.getElementById("hero");
 
-    // Background images for the hero section
     const images = [
       "images/sarees/h1.webp",
       "images/sarees/h2.jpg",
@@ -138,17 +139,12 @@
     let index = 0;
 
     function changeBackground() {
-      hero.style.backgroundImage = url('${images[index]}');
+      hero.style.backgroundImage = `url('${images[index]}')`;
       index = (index + 1) % images.length;
     }
 
-    // Initial background setup
     changeBackground();
     setInterval(changeBackground, 4000);
-
-    document.getElementById("shopBtn").addEventListener("click", () => {
-    window.location.href = "page-1.html"
-  });
 
   </script>
 </body>
